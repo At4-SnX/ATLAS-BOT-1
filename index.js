@@ -19,7 +19,7 @@ const client = new Client({
 client.once("clientReady", async () => {
   console.log(`[ATLAS EVENTS] Connectée en tant que ${client.user.tag} ✅`);
   console.log(`[ATLAS EVENTS] Protège/anime : ${SERVER_NAME}`);
-  client.user.setActivity(`${SERVER_NAME} 👋`, { type: 3 }); // 3 = Regarde
+  client.user.setActivity(`$discord.gg/atlasrpfr`, { type: 3 }); // 3 = Regarde
 
   await connectToVoiceChannel(client);
 });

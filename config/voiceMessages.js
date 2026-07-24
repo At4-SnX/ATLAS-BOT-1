@@ -14,5 +14,5 @@ module.exports = {
   // féminine française (voix par défaut de Google Traduction pour ce code
   // de langue ; l'API gratuite ne permet pas de choisir explicitement un
   // genre de voix, mais fr-FR est déjà une voix féminine).
-  VOICE_LANG: "fr-FR",
+  VOICE_LANG: "fr",
 };

@@ -16,13 +16,20 @@ const client = new Client({
   partials: [Partials.GuildMember],
 });
 
+const { ActivityType } = require("discord.js");
+
 client.once("clientReady", async () => {
   console.log(`[ATLAS EVENTS] Connectée en tant que ${client.user.tag} ✅`);
   console.log(`[ATLAS EVENTS] Protège/anime : ${SERVER_NAME}`);
-  client.user.setActivity(`discord.gg/atlasrpfr`, { type: 3 }); // 3 = Regarde
+
+  client.user.setActivity("discord.gg/atlasrpfr", {
+    type: ActivityType.Streaming,
+    url: "https://www.twitch.tv/atlasrp_officiel"
+  });
 
   await connectToVoiceChannel(client);
 });
+
 
 client.on("guildMemberAdd", (member) => {
   handleMemberAdd(member).catch((error) =>
